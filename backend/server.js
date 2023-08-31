@@ -3,14 +3,15 @@ const dbConnect = require('./database/index');
 const {PORT} = require('./config/index');
 require('dotenv').config();
 const router = require('./routes/index')
+const errorHandler = require("./middleware/errorHandler")
 
 const app = express();
 
-dbConnect();
-
 app.use(router);
 
+dbConnect();
 
+app.use(errorHandler);
 
 // app.get('/' , (req ,res) => res.json({msg: 'hello world 2'}));
 

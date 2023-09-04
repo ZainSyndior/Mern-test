@@ -9,4 +9,4 @@ const refereshtokenSchema = new Schema({
 );
 
 
-module.exports = mongoose.model('RefershToken' , refereshtokenSchema , 'tokens');
+module.exports = moongose.model('RefershToken' , refereshtokenSchema , 'tokens');
